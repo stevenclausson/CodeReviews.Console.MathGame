@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MathGame.StevenClausson
 {
@@ -47,22 +48,23 @@ namespace MathGame.StevenClausson
                     case "2":
                         sw.Start();
                         operation = "-";
-                        correctAnswer = num2 - num1;
+                        correctAnswer = num1 - num2;
                         break;
                     case "3":
                         sw.Start();
                         operation = "*";
-                        correctAnswer = num2 * num1;
+                        correctAnswer = num1 * num2;
                         break;
                     case "4":
                         sw.Start();
                         while (num1 % num2 != 0)
                         {
-                            num1 = rnd.Next(1, 101);
-                            num2 = rnd.Next(1, 101);
+                            num1 = rnd.Next(1, 10);
+                            num2 = rnd.Next(1, 10);
+                            continue;
                         }
                         operation = "/";
-                        correctAnswer = num2 / num1;
+                        correctAnswer = num1 / num2;
                         break;
                     default:
                         Console.WriteLine("Not a choice.");
