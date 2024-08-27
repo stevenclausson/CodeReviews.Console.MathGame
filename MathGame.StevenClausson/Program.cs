@@ -1,11 +1,11 @@
 ﻿namespace MathGame.StevenClausson
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Math Game!");
-            var newGame = new MathGame();
+            new MathGame();
             Console.WriteLine("Thank you for playing Math Game!");
             Console.ReadLine();
         }
