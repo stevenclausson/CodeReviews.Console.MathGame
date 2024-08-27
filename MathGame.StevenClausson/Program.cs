@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Finished!");
+            Console.WriteLine("Welcome to Math Game!");
+            var newGame = new MathGame();
+            Console.WriteLine("Thank you for playing Math Game!");
+            Console.ReadLine();
         }
     }
 }
